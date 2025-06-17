@@ -1,0 +1,1824 @@
+<report xmlns="http://developer.cognos.com/schemas/report/16.2/"           useStyleVersion="11" expressionLocale="en">
+				
+				<drillBehavior/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Summary">
+			<pageBody>
+				<contents><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="4"><contents><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;height:92px"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>UAT Summary</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:48px;color:#FFFFFF;float:left;background-color:#000000"/></style></textItem></contents><style><CSS value="background-color:black"/></style></tableCell><tableCell><contents/><style><CSS value="background-color:black"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+		</block></contents><style><CSS value="height:50%;text-align:left;vertical-align:top;background-color:black"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Logged On Users</staticValue></dataSource><style><CSS value="font-size:22pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><singleton name="Totals" refQuery="Totals">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Login Count"/></dataSource><style><CSS value="font-size:24pt;vertical-align:middle;font-weight:bold;color:white"/></style></textItem></contents>
+		</singleton></contents><style><CSS value="text-align:center;height:68px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="height:114px;width:25%;background-color:red"/><defaultStyles><defaultStyle refStyle="GuidedLayoutTopPadding"/><defaultStyle refStyle="GuidedLayoutRightPadding"/></defaultStyles></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;background-color:green"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Navigation Clicks</staticValue></dataSource><style><CSS value="font-size:22pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="text-align:center;width:100%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><singleton name="Totals1" refQuery="CountByScreen">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Total Navigation Count"/></dataSource><style><CSS value="font-size:24pt;font-weight:bold;color:white"/></style></textItem></contents>
+		</singleton></contents><style><CSS value="text-align:center;height:68px;width:100%"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="height:114px;width:25%;background-color:green"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:99%;background-color:#FF6600"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Logged On Users</staticValue></dataSource><style><CSS value="font-size:22pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="text-align:center;width:100%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><singleton name="Totals2" refQuery="Totals">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Login Count"/></dataSource><style><CSS value="font-size:24pt;vertical-align:middle;font-weight:bold;color:white"/></style></textItem></contents>
+		</singleton></contents><style><CSS value="text-align:center;height:68px;width:100%"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="height:114px;width:25%;background-color:#FF6600"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:99%;background-color:teal"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Logged On Users</staticValue></dataSource><style><CSS value="font-size:22pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="text-align:center;width:100%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><singleton name="Totals3" refQuery="Totals">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Login Count"/></dataSource><style><CSS value="font-size:24pt;vertical-align:middle;font-weight:bold;color:white"/></style></textItem></contents>
+		</singleton></contents><style><CSS value="text-align:center;height:68px;width:100%"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="height:114px;background-color:teal"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Top Screens Accessed</staticValue></dataSource><style><CSS value="font-size:24pt;font-weight:bold;color:white;vertical-align:middle"/></style></textItem></contents><style><CSS value="background-color:black;text-align:center"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Top 10 User Access</staticValue></dataSource><style><CSS value="font-size:24pt;font-weight:bold;color:white;vertical-align:middle"/></style></textItem></contents><style><CSS value="text-align:center;background-color:black"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Core Transaction Count</staticValue></dataSource><style><CSS value="font-size:24pt;font-weight:bold;color:white;vertical-align:middle"/></style></textItem></contents><style><CSS value="text-align:center;background-color:black"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><vizControl type="com.ibm.vis.donut" name="Donut1"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore7"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Screen Description"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Navigation Count" rollupMethod="total"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents><style><CSS value="width:33%"/></style></tableCell><tableCell><contents><vizControl type="com.ibm.vis.packedBubble" name="Packed bubble" autoChart="true"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore8"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User Name"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="size"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Login Count" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User Name"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents><style><CSS value="width:33%"/></style></tableCell><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column6"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore9"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Type"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Count" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Type"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents></tableCell></tableCells></tableRow></tableRows></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			</style>
+		<XMLAttributes><XMLAttribute output="no" name="RS_legacyDrillDown" value="0"/></XMLAttributes></page><page name="Transactions">
+			<pageBody>
+				<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><block>
+			<contents><textItem><dataSource><staticValue>Transactions</staticValue></dataSource><style><CSS value="background-color:#000000;color:#FFFFFF;font-weight:bold;font-size:48px;float:left"/></style></textItem></contents>
+		</block></contents><style><CSS value="text-align:left;vertical-align:top;height:50%;background-color:#000000;color:#FFFFFF;font-weight:bold;font-size:48px;float:left"/></style></tableCell></tableCells><style><CSS value="background-color:black"/></style></tableRow><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Created Transactions</staticValue></dataSource><style><CSS value="font-size:28pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="background-color:black"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Updated Transactions</staticValue></dataSource><style><CSS value="font-size:28pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="background-color:black"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list showColumnTitles="hide" refQuery="Created Transactions per user" name="List4">
+			<listColumns>
+				<listColumn>
+					<listColumnTitle>
+						<contents/>
+					</listColumnTitle>
+					<listColumnBody>
+						<contents><list horizontalPagination="true" refQuery="Created Transactions per user" name="List3">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Work Orders Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Work Orders Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Requisitions Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Requisitions Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Purchase Orders Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Purchase Orders Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Invoices Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Invoices Created"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="sb"/>
+							</defaultStyles>
+						</style>
+					</listColumnBody>
+				</listColumn>
+			</listColumns>
+			
+			
+			
+			<style>
+				<CSS value="border-collapse:collapse; width:100%"/>
+				<defaultStyles>
+					<defaultStyle refStyle="sc"/>
+				</defaultStyles>
+			</style>
+		<listGroups><listGroup refDataItem="User"><listHeader><listRows><listRow><rowCells><rowCell><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem><textItem><dataSource><staticValue>: </staticValue></dataSource></textItem><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles><CSS value="background-color:silver"/></style></rowCell></rowCells></listRow></listRows></listHeader><XMLAttributes><XMLAttribute output="no" name="RS_SectionedEdge" value="columns"/></XMLAttributes></listGroup></listGroups><sectionsFrame sectionedEdge="columns" refFrame="List3"/></list></contents></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="width:100%;text-align:left;vertical-align:top;height:50%"/><defaultStyles><defaultStyle refStyle="GuidedLayoutTopPadding"/></defaultStyles></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			</style>
+		</page><page name="System Usage - Login and Access">
+			<pageBody>
+				<contents><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="4"><contents><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;height:92px"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>System Usage and Access</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:48px;color:#FFFFFF;float:left;background-color:#000000"/></style></textItem></contents><style><CSS value="background-color:black"/></style></tableCell><tableCell><contents/><style><CSS value="background-color:black"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+		</block></contents><style><CSS value="height:50%;text-align:left;vertical-align:top;background-color:black"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>System Access By Screen</staticValue></dataSource><style><CSS value="font-size:24pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="width:33%;background-color:gray"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>System Access By User</staticValue></dataSource><style><CSS value="font-size:24pt;font-weight:bold;color:white"/></style></textItem></contents><style><CSS value="width:33%;background-color:gray"/></style></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" pageBreakText="false" name="Tab By Date" refQuery="TabAccessByDate" scrollableAreaHeight="500">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;width:100%;height:500px"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><generatedBackground><fill><linearGradient><gradientColor/></linearGradient></fill></generatedBackground></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen Name"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:left"/></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen Name"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen Tab Name"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:left"/></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen Tab Name"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:left"/></style><contents><textItem><dataSource><dataItemValue refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Accessed"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:left"/></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Accessed"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="width:33%;height:500px;text-align:left"/></style></tableCell><tableCell><contents><list horizontalPagination="true" pageBreakText="false" name="User Access" refQuery="LoginCountwithLastLoginDate" scrollableAreaHeight="500">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;width:100%;height:500px"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User Name"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User Name"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Login Count"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Login Count"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="height:500px;width:33%"/></style></tableCell><tableCell><contents/><style><CSS value="height:500px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			</style>
+		</page><page name="System Usage - Login and Unique Access">
+			<pageBody>
+				<contents><block>
+			<contents/>
+		<style><CSS value="height:2px"/><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>System Logins</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="LoginCount" refQuery="LoginCountwithLastLoginDate">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>Logins By User and Last Login</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="LoginCountwithLastLoginDate">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User Name"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User Name"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Login Count"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Login Count"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents/>
+		<style><CSS value="color:red;height:2px"/><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="6"><contents><textItem><dataSource><staticValue>System Access by Screens</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="CountByScreen" refQuery="CountByScreen">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="CountByScreen">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents><list horizontalPagination="true" name="UniqueScreenVisits" refQuery="UniqueScreenVisits">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="UniqueScreenVisits">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Unique Users"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Unique Users"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents><list horizontalPagination="true" name="TargetByUser" refQuery="TargetsByUser">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="TargetsByUser">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Unique Navigations"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Unique Navigations"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/><style><CSS value="height:50%;width:16%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="TabAccessByDate" refQuery="TabAccessByDate">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="TabAccessByDate">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen Tab"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen Tab"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Accessed"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Accessed"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents><list horizontalPagination="true" name="ScreenAccessByDate" refQuery="ScreenAccessByDate">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="ScreenAccessByDate">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Navigation Count"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Accessed"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Accessed"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents/>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			<CSS value="background-image:none"/></style>
+		<pageHeader><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><block>
+			<contents><image>
+			<dataSource>
+				<staticValue>https://swr-inforoauth2.sapphire-cloud.net:7000/images/Logo_SQUARE_128x128.png</staticValue>
+			</dataSource>
+		</image></contents>
+		</block></contents><style><CSS value="width:9%"/></style></tableCell><tableCell><contents><block>
+			<contents><textItem><dataSource><staticValue>System Usage - Login and Unique Access</staticValue></dataSource><style><CSS value="font-size:20pt;font-weight:bold"/></style></textItem></contents>
+		</block></contents><style><CSS value="width:81%;text-align:center;vertical-align:middle"/></style></tableCell><tableCell><contents><date>
+			<style>
+				<dataFormat>
+					<dateFormat/>
+				</dataFormat>
+			</style>
+		</date><time>
+			<style>
+				<dataFormat>
+					<timeFormat/>
+				</dataFormat>
+			</style>
+		</time></contents><style><CSS value="width:9%;text-align:right;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></pageHeader><pageFooter><contents/></pageFooter><pageSetup orientation="landscape"><namedPaper name="/configuration/pageDefinition[@name=&apos;A4&apos;]"/></pageSetup></page><page name="System Usage - User Actions">
+			<pageBody>
+				<contents><block>
+			<contents/>
+		<style><CSS value="height:2px"/><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Last 5 Actions Per User</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="Last5NoFilter" refQuery="Last5ActionsPerUserNotFiltered">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="Last5ActionsPerUserNotFiltered">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Action"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Action"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Action Date"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Action Date"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents/>
+		<style><CSS value="color:red;height:2px"/><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="6"><contents><textItem><dataSource><staticValue>Last 5 Actions Per User - Filtered (No Authentication or WebService)</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents><list horizontalPagination="true" name="FilteredAction1" refQuery="Last5ActionsPerUserFilteredv1">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="Last5ActionsPerUserFilteredv1">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Type"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Type"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Target"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Target"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Activity"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Activity"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Activity Date"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Activity Date"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents/>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="6"><contents><textItem><dataSource><staticValue>Last 5 Actions Per User - Filtered (No Authentication or WebService)</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents><list horizontalPagination="true" name="List2" refQuery="Last5ActionsPerUserFilteredv2">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>List</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="Last5ActionsPerUserFilteredv2">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Screen"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Screen"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Activity Type"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Activity Type"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Activity"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Activity"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Activity Date"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Activity Date"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents/><style><CSS value="width:16%"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell colSpan="6"><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			<CSS value="background-image:none"/></style>
+		<pageHeader><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><block>
+			<contents><image>
+			<dataSource>
+				<staticValue>https://swr-inforoauth2.sapphire-cloud.net:7000/images/Logo_SQUARE_128x128.png</staticValue>
+			</dataSource>
+		</image></contents>
+		</block></contents><style><CSS value="width:9%"/></style></tableCell><tableCell><contents><block>
+			<contents><textItem><dataSource><staticValue>System Usage - User Actions</staticValue></dataSource><style><CSS value="font-size:20pt;font-weight:bold"/></style></textItem></contents>
+		</block></contents><style><CSS value="width:81%;text-align:center;vertical-align:middle"/></style></tableCell><tableCell><contents><date>
+			<style>
+				<dataFormat>
+					<dateFormat/>
+				</dataFormat>
+			</style>
+		</date><time>
+			<style>
+				<dataFormat>
+					<timeFormat/>
+				</dataFormat>
+			</style>
+		</time></contents><style><CSS value="width:9%;text-align:right;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></pageHeader><pageFooter><contents/></pageFooter><pageSetup orientation="landscape"><namedPaper name="/configuration/pageDefinition[@name=&apos;A4&apos;]"/></pageSetup></page><page name="System Usage - Module Usage">
+			<pageBody>
+				<contents><block>
+			<contents/>
+		<style><CSS value="height:2px"/><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="2"><contents><textItem><dataSource><staticValue>WO Module Usage</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><style><CSS value="text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="List1" refQuery="CorrectiveWO">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;text-justify:distribute-all-lines"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>Corrective and Breakdown Work Orders</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="CorrectiveWO">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Corrective Work Orders Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Corrective Work Orders Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Corrective Work Orders Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Corrective Work Orders Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Date Last Corrective WO Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Date Last Corrective WO Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column1"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore2"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Corrective Work Orders Updated" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Corrective Work Orders Created" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotMeasureGroup refSlot="values"/></vcSlotDsColumns></vcSlotData></vcSlots><XMLAttributes><XMLAttribute output="no" name="RS_hasExtraData" value="true"/></XMLAttributes></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="PPMList" refQuery="PPMWork">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;text-justify:distribute-all-lines"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>Planned Maintenance Exam Work Orders</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="PPMWork">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Exam Work Orders Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Exam Work Orders Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Exam Work Orders Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Exam Work Orders Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Date Last Exam WO Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Date Last Exam WO Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="vertical-align:top"/></style></tableCell><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column2"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore3"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Exam Work Orders Created" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Exam Work Orders Updated" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotMeasureGroup refSlot="values"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents><style><CSS value="width:50%"/></style></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents/>
+		<style><CSS value="color:red;height:2px"/><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="2"><contents><textItem><dataSource><staticValue>Purchasing and Receipt Module Usage</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><style><CSS value="text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="Part and Service Purchasing" refQuery="PartServicePOs">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>Part and Services Purchasing</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="PartServicePOs">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Part POs Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Part POs Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Part POs Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Part POs Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Part PO Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Part PO Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Services POs Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Services POs Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Services POs Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Services POs Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Services PO Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Services PO Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column3"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore4"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Part POs Created" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Part POs Updated" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Services POs Created" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Services POs Updated" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotMeasureGroup refSlot="values"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="Part and Services Receipting" refQuery="PartServiceReceipts">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>Part and Services Receipting</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="PartServiceReceipts">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Part Receipt Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Part Receipt Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Part Receipt Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Part Receipt Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Part Receipt Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Part Receipt Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Services Receipt Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Services Receipt Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Services Receipt Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Services Receipt Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Services Receipt Updated"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Services Receipt Updated"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="vertical-align:top"/></style></tableCell><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column4"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore5"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Part Receipt Created" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Part Receipt Updated" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Services Receipt Created" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Services Receipt Updated" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotMeasureGroup refSlot="values"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents><style><CSS value="width:50%"/></style></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents/>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="2"><contents><textItem><dataSource><staticValue>Transaction Module Usage</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><style><CSS value="text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" name="Transactions" refQuery="StockIssuesAndReceipts">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><staticValue>Stock Issues and Returns</staticValue></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lc"/></defaultStyles></style><contents><list horizontalPagination="true" refQuery="StockIssuesAndReceipts">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+							</textItem>
+						</contents>
+						<style>
+							<CSS value="padding:16px;"/>
+						</style>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="User"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Stock Issues Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Stock Issues Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Date Last Stock Issue"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Date Last Stock Issue"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Stock Returns Created"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Stock Returns Created"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Date Last Stock Return"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Date Last Stock Return"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Last Login"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Last Login"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></listColumnBody></listColumn></listColumns></list></contents><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column5"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore6"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Stock Issues Created" rollupMethod="total"/><vcSlotDsColumn refDsColumn="Stock Returns Created" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"><vcSlotDsColumns><vcSlotMeasureGroup refSlot="values"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		</block></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			<CSS value="background-image:none;width:21cm"/></style>
+		<pageHeader><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><block>
+			<contents><image>
+			<dataSource>
+				<staticValue>https://swr-inforoauth2.sapphire-cloud.net:7000/images/Logo_SQUARE_128x128.png</staticValue>
+			</dataSource>
+		</image></contents>
+		</block></contents><style><CSS value="width:9%"/></style></tableCell><tableCell><contents><block>
+			<contents><textItem><dataSource><staticValue>System Usage - Module Usage</staticValue></dataSource><style><CSS value="font-size:20pt;font-weight:bold"/></style></textItem></contents>
+		</block></contents><style><CSS value="width:81%;text-align:center;vertical-align:middle"/></style></tableCell><tableCell><contents><date>
+			<style>
+				<dataFormat>
+					<dateFormat/>
+				</dataFormat>
+			</style>
+		</date><time>
+			<style>
+				<dataFormat>
+					<timeFormat/>
+				</dataFormat>
+			</style>
+		</time></contents><style><CSS value="width:9%;text-align:right;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></pageHeader><pageFooter><contents/></pageFooter><pageSetup orientation="landscape"><namedPaper name="/configuration/pageDefinition[@name=&apos;A4&apos;]"/></pageSetup></page>
+						<page name="KPIs and Charts">
+			<pageBody>
+				<contents><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell colSpan="3"><contents/><style><CSS value="text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center;width:33%"/></style></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><vizControl type="com.ibm.vis.clusteredColumn" name="Clustered column"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User Name"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Login Count" rollupMethod="total"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="color"/></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents><style><CSS value="width:33%"/></style></tableCell><tableCell><contents><vizControl type="com.ibm.vis.donut" name="Donut"><vcDataSets><vcDataSet idDataSet="data" refDataStore="dataStore1"><vcSlots><vcSlotData idSlot="categories"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="User Name"/></vcSlotDsColumns></vcSlotData><vcSlotData idSlot="values"><vcSlotDsColumns><vcSlotDsColumn refDsColumn="Login Count" rollupMethod="total"/></vcSlotDsColumns></vcSlotData></vcSlots></vcDataSet></vcDataSets><vizPropertyValues><vizPropertyLengthValue name="vcWidth">100%</vizPropertyLengthValue><vizPropertyLengthValue name="vcHeight">500px</vizPropertyLengthValue></vizPropertyValues></vizControl></contents><style><CSS value="width:33%"/></style></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="height:50%;width:33%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="width:33%"/></style></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="width:33%"/></style></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block><block>
+			<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;height:100%;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="0"/></XMLAttributes><style><CSS value="height:50%;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="height:50%;width:50%;vertical-align:top"/></style><XMLAttributes><XMLAttribute output="no" name="pageLayoutCellIndex" value="1"/></XMLAttributes></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows><XMLAttributes><XMLAttribute output="no" name="isPageLayoutTable" value="true"/></XMLAttributes></table></contents>
+		<style><defaultStyles><defaultStyle refStyle="GuidedLayoutMargin"/></defaultStyles></style></block></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="pb"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pg"/>
+				</defaultStyles>
+			</style>
+		<pageHeader><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><block>
+			<contents><image>
+			<dataSource>
+				<staticValue>https://swr-inforoauth2.sapphire-cloud.net:7000/images/Logo_SQUARE_128x128.png</staticValue>
+			</dataSource>
+		</image></contents>
+		</block></contents><style><CSS value="width:9%"/></style></tableCell><tableCell><contents><block>
+			<contents><textItem><dataSource><staticValue>KPIs and Charts</staticValue></dataSource><style><CSS value="font-size:20pt;font-weight:bold"/></style></textItem></contents>
+		</block></contents><style><CSS value="width:81%;text-align:center;vertical-align:middle"/></style></tableCell><tableCell><contents><date>
+			<style>
+				<dataFormat>
+					<dateFormat/>
+				</dataFormat>
+			</style>
+		</date><time>
+			<style>
+				<dataFormat>
+					<timeFormat/>
+				</dataFormat>
+			</style>
+		</time></contents><style><CSS value="width:9%;text-align:right;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></pageHeader><pageFooter><contents/></pageFooter></page></reportPages>
+					</layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute output="no" name="RS_CreateExtendedDataItems" value="true"/><XMLAttribute output="no" name="listSeparator" value=","/><XMLAttribute output="no" name="decimalSeparator" value="."/><XMLAttribute output="no" name="RS_modelModificationTime" value="2025-03-04T20:10:48.590Z"/></XMLAttributes><modelPath>/content/package[@name=&apos;HxGNEAMPackage_11x&apos;]/model[@name=&apos;model&apos;]</modelPath><reportName>UATReport</reportName><queries><query name="LoginCountwithLastLoginDate">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="AdvRepData">
+			<sqlText>WITH login_data AS (
+  SELECT 
+    SES_USER,
+    SUS_ACTION_DATE,
+    MAX(SUS_ACTION_DATE) OVER (PARTITION BY SES_USER) AS last_login
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+)
+SELECT 
+  SES_USER AS &quot;User Name&quot;,
+  COUNT(*) AS &quot;Login Count&quot;,
+  MAX(last_login) AS &quot;Last Login&quot;
+FROM login_data
+WHERE NVL(SES_USER, &apos;xxx&apos;) &lt;&gt; &apos;xxx&apos; AND SES_USER &lt;&gt; &apos;DATABRIDGEINTERNALUSER&apos;
+GROUP BY SES_USER</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User Name"/><mdProjectedItem name="Login Count"/><mdProjectedItem name="Last Login"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User Name"><expression>[SQL1].[User Name]</expression></dataItem><dataItem name="Login Count" aggregate="total"><expression>[SQL1].[Login Count]</expression></dataItem><dataItem name="Last Login"><expression>[SQL1].[Last Login]</expression></dataItem></selection>
+		</query><query name="CountByScreen">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="AdvRepData">
+			<sqlText>SELECT 
+  SUS_TARGET AS &quot;Screen&quot;,
+  COUNT(*) AS &quot;Navigation Count&quot;,
+  SUM(COUNT(*)) OVER () AS &quot;Total Navigation Count&quot;
+FROM R5USAGE
+WHERE SUS_ACTION = &apos;NAVIGATION&apos;
+GROUP BY SUS_TARGET
+ORDER BY &quot;Navigation Count&quot; DESC
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Navigation Count"/><mdProjectedItem name="Total Navigation Count"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen"><expression>[SQL2].[Screen]</expression></dataItem><dataItem name="Navigation Count" aggregate="total"><expression>[SQL2].[Navigation Count]</expression></dataItem><dataItem name="Total Navigation Count"><expression>[SQL2].[Total Navigation Count]</expression></dataItem></selection>
+		</query><query name="UniqueScreenVisits">
+			<source>
+				
+			<sqlQuery name="SQL3" dataSource="AdvRepData">
+			<sqlText>SELECT 
+  SUS_TARGET as &quot;Screen&quot;,
+  COUNT(DISTINCT SES_USER) AS &quot;Unique Users&quot;
+FROM R5USAGE
+LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+WHERE SUS_ACTION = &apos;NAVIGATION&apos;
+GROUP BY SUS_TARGET
+ORDER BY &quot;Unique Users&quot; DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Unique Users"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen"><expression>[SQL3].[Screen]</expression></dataItem><dataItem name="Unique Users" aggregate="total"><expression>[SQL3].[Unique Users]</expression></dataItem></selection>
+		</query><query name="TargetsByUser">
+			<source>
+				
+			<sqlQuery name="SQL4" dataSource="AdvRepData">
+			<sqlText>SELECT 
+  SUS_TARGET as &quot;Screen&quot;,
+  COUNT(DISTINCT SES_USER || &apos;-&apos; || SUS_TARGET) AS &quot;Unique Navigations&quot;
+FROM R5USAGE
+LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+WHERE SUS_ACTION = &apos;NAVIGATION&apos;
+GROUP BY SUS_TARGET
+ORDER BY &quot;Unique Navigations&quot; DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Unique Navigations"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen"><expression>[SQL4].[Screen]</expression></dataItem><dataItem name="Unique Navigations"><expression>[SQL4].[Unique Navigations]</expression></dataItem></selection>
+		</query><query name="ScreenAccessByDate">
+			<source>
+				
+			<sqlQuery name="SQL5" dataSource="AdvRepData">
+			<sqlText>WITH navigation_data AS (
+  SELECT 
+    SUS_TARGET,
+    SUS_ACTION_DATE
+  FROM R5USAGE
+  WHERE SUS_ACTION = &apos;NAVIGATION&apos;
+)
+SELECT 
+  SUS_TARGET as &quot;Screen&quot;,
+  COUNT(*) AS &quot;Navigation Count&quot;,
+  MAX(SUS_ACTION_DATE) AS &quot;Last Accessed&quot;
+FROM navigation_data
+GROUP BY SUS_TARGET
+ORDER BY &quot;Last Accessed&quot; DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Navigation Count"/><mdProjectedItem name="Last Accessed"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen"><expression>[SQL5].[Screen]</expression></dataItem><dataItem name="Navigation Count"><expression>[SQL5].[Navigation Count]</expression></dataItem><dataItem name="Last Accessed"><expression>[SQL5].[Last Accessed]</expression></dataItem></selection>
+		</query><query name="TabAccessByDate">
+			<source>
+				
+			<sqlQuery name="SQL6" dataSource="AdvRepData">
+			<sqlText>WITH navigation_data AS (
+  SELECT 
+    SUS_TARGET,
+    FUN_DESC,
+    SUS_TARGET_TAB,
+    o7getTabName(ftb_function,&apos;EN&apos;,ftb_tab) as &quot;ScreenTabName&quot;,
+    SUS_ACTION_DATE
+  FROM R5USAGE
+  LEFT OUTER JOIN R5FUNCTIONS ON FUN_CODE = SUS_TARGET
+  LEFT OUTER JOIN R5FUNCTIONTABS ON FTB_TAB = SUS_TARGET_TAB
+  WHERE SUS_ACTION = &apos;NAVIGATION&apos;
+)
+SELECT 
+  SUS_TARGET AS &quot;Screen&quot;,
+  FUN_DESC AS &quot;Screen Name&quot;,
+  SUS_TARGET_TAB AS &quot;Screen Tab&quot;,
+  &quot;ScreenTabName&quot; AS &quot;ScreenTabName&quot;,
+  COUNT(*) AS &quot;Navigation Count&quot;,
+  MAX(SUS_ACTION_DATE) AS &quot;Last Accessed&quot;
+FROM navigation_data
+GROUP BY SUS_TARGET, SUS_TARGET_TAB, FUN_DESC, &quot;ScreenTabName&quot;    
+ORDER BY &quot;Last Accessed&quot; DESC
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Screen Name"/><mdProjectedItem name="Screen Tab"/><mdProjectedItem name="ScreenTabName"/><mdProjectedItem name="Navigation Count"/><mdProjectedItem name="Last Accessed"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen"><expression>[SQL6].[Screen]</expression></dataItem><dataItem name="Screen Tab"><expression>[SQL6].[Screen Tab]</expression></dataItem><dataItem name="Navigation Count"><expression>[SQL6].[Navigation Count]</expression></dataItem><dataItem name="Last Accessed"><expression>[SQL6].[Last Accessed]</expression></dataItem><dataItem name="Screen Tab Name"><expression>[SQL6].[ScreenTabName]</expression></dataItem><dataItem name="Screen Name"><expression>[SQL6].[Screen Name]</expression></dataItem></selection>
+		</query><query name="ListUpdatedLastDate">
+			<source>
+				
+			<sqlQuery name="SQL7" dataSource="AdvRepData">
+			<sqlText>WITH navigation_data AS (
+  SELECT 
+    SUS_TARGET,
+    SUS_TYPE,
+    SUS_ACTION_DATE
+  FROM R5USAGE
+  WHERE SUS_ACTION = &apos;GRID&apos;
+  AND SUS_TYPE = &apos;LIST.EDIT_INFO.STORED&apos;
+)
+SELECT 
+  SUS_TARGET as &quot;Screen&quot;,
+  SUS_TYPE as &quot;Screen Type&quot;,
+  COUNT(*) AS &quot;Navigation Count&quot;,
+  MAX(SUS_ACTION_DATE) AS &quot;Last Accessed&quot;
+FROM navigation_data
+GROUP BY SUS_TARGET, SUS_TYPE 
+ORDER BY &quot;Last Accessed&quot; DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Screen Type"/><mdProjectedItem name="Navigation Count"/><mdProjectedItem name="Last Accessed"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen"><expression>[SQL7].[Screen]</expression></dataItem><dataItem name="Screen Type"><expression>[SQL7].[Screen Type]</expression></dataItem><dataItem name="Navigation Count"><expression>[SQL7].[Navigation Count]</expression></dataItem><dataItem name="Last Accessed"><expression>[SQL7].[Last Accessed]</expression></dataItem></selection>
+		</query><query name="Last5ActionsPerUserNotFiltered">
+			<source>
+				
+			<sqlQuery name="SQL8" dataSource="AdvRepData">
+			<sqlText>WITH ranked_usage AS (
+  SELECT
+    SES_USER,
+    SUS_ACTION,
+    SUS_TARGET,
+    SUS_ACTION_DATE,
+    ROW_NUMBER() OVER (
+      PARTITION BY SES_USER 
+      ORDER BY SUS_ACTION_DATE DESC
+    ) AS rn
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+)
+SELECT 
+  SES_USER as &quot;User&quot;,
+  SUS_TARGET as &quot;Screen&quot;,
+  SUS_ACTION as &quot;Action&quot;,
+  SUS_ACTION_DATE as &quot;Action Date&quot;
+FROM ranked_usage
+WHERE rn &lt;= 5
+ORDER BY SES_USER, SUS_ACTION_DATE DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Screen"/><mdProjectedItem name="Action"/><mdProjectedItem name="Action Date"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL8].[User]</expression></dataItem><dataItem name="Screen"><expression>[SQL8].[Screen]</expression></dataItem><dataItem name="Action"><expression>[SQL8].[Action]</expression></dataItem><dataItem name="Action Date"><expression>[SQL8].[Action Date]</expression></dataItem></selection>
+		</query><query name="Last5ActionsPerUserFilteredv1">
+			<source>
+				
+			<sqlQuery name="SQL9" dataSource="AdvRepData">
+			<sqlText>WITH ranked_usage AS (
+  SELECT
+    SES_USER,
+    SUS_TYPE,
+    SUS_ACTION,
+    SUS_TARGET,
+    SUS_ACTION_DATE,
+    ROW_NUMBER() OVER (
+      PARTITION BY SES_USER 
+      ORDER BY SUS_ACTION_DATE DESC
+    ) AS rn
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+)
+SELECT 
+  SES_USER as &quot;User&quot;,
+  SUS_TYPE as &quot;Type&quot;,
+  SUS_TARGET as &quot;Target&quot;,
+  SUS_ACTION as &quot;Activity&quot;,
+  SUS_ACTION_DATE as &quot;Activity Date&quot;
+FROM ranked_usage
+WHERE rn &lt;= 5
+AND SUS_ACTION NOT IN (&apos;AUTHENTICATION&apos;,&apos;WEBSERVICE&apos;)
+ORDER BY SES_USER, SUS_ACTION_DATE DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Type"/><mdProjectedItem name="Target"/><mdProjectedItem name="Activity"/><mdProjectedItem name="Activity Date"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL9].[User]</expression></dataItem><dataItem name="Type"><expression>[SQL9].[Type]</expression></dataItem><dataItem name="Target"><expression>[SQL9].[Target]</expression></dataItem><dataItem name="Activity"><expression>[SQL9].[Activity]</expression></dataItem><dataItem name="Activity Date"><expression>[SQL9].[Activity Date]</expression></dataItem></selection>
+		</query><query name="Last5ActionsPerUserFilteredv2">
+			<source>
+				
+			<sqlQuery name="SQL10" dataSource="AdvRepData">
+			<sqlText>WITH ranked_usage AS (
+  SELECT
+    SES_USER,
+	SUS_TYPE,
+    SUS_ACTION,
+    SUS_TARGET,
+    SUS_ACTION_DATE,
+    ROW_NUMBER() OVER (
+      PARTITION BY SES_USER 
+      ORDER BY SUS_ACTION_DATE DESC
+    ) AS rn
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+)
+SELECT 
+  SES_USER as &quot;User&quot;,
+  SUS_TARGET as &quot;Screen&quot;,
+  SUS_TYPE as &quot;Activity Type&quot;,
+  SUS_ACTION as &quot;Activity&quot;,
+  SUS_ACTION_DATE as &quot;Activity Date&quot;
+FROM ranked_usage
+WHERE rn &lt;= 5
+AND SUS_TYPE NOT IN (&apos;LOGIN&apos;,&apos;LOGOUT&apos;)
+AND SUS_ACTION &lt;&gt; &apos;WEBSERVICE&apos;
+ORDER BY SES_USER, SUS_ACTION_DATE DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Screen"/><mdProjectedItem name="Activity Type"/><mdProjectedItem name="Activity"/><mdProjectedItem name="Activity Date"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL10].[User]</expression></dataItem><dataItem name="Screen"><expression>[SQL10].[Screen]</expression></dataItem><dataItem name="Activity Type"><expression>[SQL10].[Activity Type]</expression></dataItem><dataItem name="Activity"><expression>[SQL10].[Activity]</expression></dataItem><dataItem name="Activity Date"><expression>[SQL10].[Activity Date]</expression></dataItem></selection>
+		</query><query name="LastActionLastUsedByDate">
+			<source>
+				
+			<sqlQuery name="SQL11" dataSource="AdvRepData">
+			<sqlText>SELECT 
+  SES_USER,
+  SUS_ACTION,
+  MAX(SUS_ACTION_DATE) AS &quot;Last Accessed&quot;
+FROM R5USAGE
+LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+WHERE SUS_TYPE NOT IN (&apos;LOGIN&apos;, &apos;LOGOUT&apos;)
+  AND SUS_ACTION &lt;&gt; &apos;WEBSERVICE&apos;
+GROUP BY SES_USER, SUS_ACTION
+ORDER BY SES_USER, &quot;Last Accessed&quot; DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="SES_USER"/><mdProjectedItem name="SUS_ACTION"/><mdProjectedItem name="Last Accessed"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="SES_USER"><expression>[SQL11].[SES_USER]</expression></dataItem><dataItem name="SUS_ACTION"><expression>[SQL11].[SUS_ACTION]</expression></dataItem><dataItem name="Last Accessed"><expression>[SQL11].[Last Accessed]</expression></dataItem></selection>
+		</query><query name="LastRowByUserAndAction">
+			<source>
+				
+			<sqlQuery name="SQL12" dataSource="AdvRepData">
+			<sqlText>WITH ranked_actions AS (
+  SELECT
+    SES_USER,
+    SUS_ACTION,
+    SUS_TARGET,
+    SUS_ACTION_DATE,
+    ROW_NUMBER() OVER (
+      PARTITION BY SES_USER, SUS_ACTION 
+      ORDER BY SUS_ACTION_DATE DESC
+    ) AS rn
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE NOT IN (&apos;LOGIN&apos;, &apos;LOGOUT&apos;)
+    AND SUS_ACTION &lt;&gt; &apos;WEBSERVICE&apos;
+)
+SELECT 
+  SES_USER,
+  SUS_ACTION,
+  SUS_TARGET,
+  SUS_ACTION_DATE AS &quot;Last Accessed&quot;
+FROM ranked_actions
+WHERE rn = 1
+ORDER BY SES_USER, &quot;Last Accessed&quot; DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="SES_USER"/><mdProjectedItem name="SUS_ACTION"/><mdProjectedItem name="SUS_TARGET"/><mdProjectedItem name="Last Accessed"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="SES_USER"><expression>[SQL12].[SES_USER]</expression></dataItem><dataItem name="SUS_ACTION"><expression>[SQL12].[SUS_ACTION]</expression></dataItem><dataItem name="SUS_TARGET"><expression>[SQL12].[SUS_TARGET]</expression></dataItem><dataItem name="Last Accessed"><expression>[SQL12].[Last Accessed]</expression></dataItem></selection>
+		</query><query name="Transactions_Pivot">
+			<source>
+				
+			<sqlQuery name="SQL16" dataSource="">
+			<sqlText/>
+		</sqlQuery></source>
+			<selection/>
+		</query><query name="CorrectiveWO">
+			<source>
+				
+			<sqlQuery name="SQL13" dataSource="AdvRepData">
+			<sqlText>WITH user_actions AS (
+  SELECT USR_DESC AS UpdatedBy, &apos;CORRECTIVE_WO_CREATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5EVENTS ON EVT_CODE = AVA_PRIMARYID
+  WHERE AVA_TABLE = &apos;R5EVENTS&apos; AND AVA_INSERTED = &apos;+&apos;
+  AND USR_DESC &lt;&gt; &apos;NAME&apos;
+  AND USR_DESC IS NOT NULL
+  AND EVT_TYPE = &apos;JOB&apos;
+  
+  UNION ALL
+  SELECT USR_DESC AS UpdatedBy, &apos;CORRECTIVE_WO_UPDATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5EVENTS ON EVT_CODE = AVA_PRIMARYID
+  WHERE AVA_TABLE = &apos;R5EVENTS&apos; AND AVA_UPDATED = &apos;+&apos;
+  AND USR_DESC &lt;&gt; &apos;NAME&apos;
+  AND USR_DESC IS NOT NULL
+  AND EVT_TYPE = &apos;JOB&apos;
+
+),
+
+last_login AS (
+  SELECT 
+    SES_USER,
+    MAX(SUS_ACTION_DATE) AS last_login
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+  GROUP BY SES_USER
+)
+
+SELECT
+  ua.UpdatedBy AS &quot;User&quot;,
+
+  COUNT(CASE WHEN ACTION = &apos;CORRECTIVE_WO_CREATED&apos; THEN 1 END) AS &quot;Corrective Work Orders Created&quot;,
+  COUNT(CASE WHEN ACTION = &apos;CORRECTIVE_WO_UPDATED&apos; THEN 1 END) AS &quot;Corrective Work Orders Updated&quot;,
+  MAX(CASE WHEN ACTION   = &apos;CORRECTIVE_WO_UPDATED&apos; THEN ACTION_DATE END) AS &quot;Date Last Corrective WO Updated&quot;,
+  
+  MAX(ll.last_login) AS &quot;Last Login&quot;
+
+FROM user_actions ua
+LEFT JOIN R5USERS ru ON ru.USR_DESC = ua.UpdatedBy
+LEFT JOIN last_login ll ON ll.SES_USER = ru.USR_CODE
+GROUP BY ua.UpdatedBy
+ORDER BY ua.UpdatedBy
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Corrective Work Orders Created"/><mdProjectedItem name="Corrective Work Orders Updated"/><mdProjectedItem name="Date Last Corrective WO Updated"/><mdProjectedItem name="Last Login"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL13].[User]</expression></dataItem><dataItem name="Corrective Work Orders Created" aggregate="total"><expression>[SQL13].[Corrective Work Orders Created]</expression></dataItem><dataItem name="Corrective Work Orders Updated" aggregate="total"><expression>[SQL13].[Corrective Work Orders Updated]</expression></dataItem><dataItem name="Date Last Corrective WO Updated"><expression>[SQL13].[Date Last Corrective WO Updated]</expression></dataItem><dataItem name="Last Login"><expression>[SQL13].[Last Login]</expression></dataItem></selection>
+		</query><query name="PPMWork">
+			<source>
+				
+			<sqlQuery name="SQL14" dataSource="AdvRepData">
+			<sqlText>WITH user_actions AS (
+
+  SELECT USR_DESC AS UpdatedBy, &apos;EXAM_WO_CREATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5EVENTS ON EVT_CODE = AVA_PRIMARYID
+  WHERE AVA_TABLE = &apos;R5EVENTS&apos; AND AVA_INSERTED = &apos;+&apos;
+  AND USR_DESC &lt;&gt; &apos;NAME&apos;
+  AND USR_DESC IS NOT NULL
+  AND EVT_TYPE = &apos;PPM&apos;
+  
+  UNION ALL
+  SELECT USR_DESC AS UpdatedBy, &apos;EXAM_WO_UPDATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5EVENTS ON EVT_CODE = AVA_PRIMARYID
+  WHERE AVA_TABLE = &apos;R5EVENTS&apos; AND AVA_UPDATED = &apos;+&apos;
+  AND USR_DESC &lt;&gt; &apos;NAME&apos;
+  AND USR_DESC IS NOT NULL
+  AND EVT_TYPE = &apos;PPM&apos;
+
+),
+
+last_login AS (
+  SELECT 
+    SES_USER,
+    MAX(SUS_ACTION_DATE) AS last_login
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+  GROUP BY SES_USER
+)
+
+SELECT
+  ua.UpdatedBy AS &quot;User&quot;,
+
+  COUNT(CASE WHEN ACTION = &apos;EXAM_WO_CREATED&apos; THEN 1 END) AS &quot;Exam Work Orders Created&quot;,
+  COUNT(CASE WHEN ACTION = &apos;EXAM_WO_UPDATED&apos; THEN 1 END) AS &quot;Exam Work Orders Updated&quot;,
+  MAX(CASE WHEN ACTION   = &apos;EXAM_WO_UPDATED&apos; THEN ACTION_DATE END) AS &quot;Date Last Exam WO Updated&quot;,
+  
+  MAX(ll.last_login) AS &quot;Last Login&quot;
+
+FROM user_actions ua
+LEFT JOIN R5USERS ru ON ru.USR_DESC = ua.UpdatedBy
+LEFT JOIN last_login ll ON ll.SES_USER = ru.USR_CODE
+GROUP BY ua.UpdatedBy
+ORDER BY ua.UpdatedBy
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Exam Work Orders Created"/><mdProjectedItem name="Exam Work Orders Updated"/><mdProjectedItem name="Date Last Exam WO Updated"/><mdProjectedItem name="Last Login"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL14].[User]</expression></dataItem><dataItem name="Exam Work Orders Created" aggregate="total"><expression>[SQL14].[Exam Work Orders Created]</expression></dataItem><dataItem name="Exam Work Orders Updated" aggregate="total"><expression>[SQL14].[Exam Work Orders Updated]</expression></dataItem><dataItem name="Date Last Exam WO Updated"><expression>[SQL14].[Date Last Exam WO Updated]</expression></dataItem><dataItem name="Last Login"><expression>[SQL14].[Last Login]</expression></dataItem></selection>
+		</query><query name="PartServicePOs">
+			<source>
+				
+			<sqlQuery name="SQL15" dataSource="AdvRepData">
+			<sqlText>WITH user_actions AS (
+
+  SELECT USR_DESC AS UpdatedBy, &apos;PART_PO_CREATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5ORDERS     ON ORD_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS      ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5ORDERS&apos; 
+    AND AVA_INSERTED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;PD&apos;,&apos;PS&apos;)
+    AND AAT_COLUMN = &apos;ORD_CODE&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos;
+
+  UNION ALL 
+
+  SELECT USR_DESC AS UpdatedBy, &apos;SERVICES_PO_CREATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5ORDERS     ON ORD_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS      ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5ORDERS&apos; 
+    AND AVA_INSERTED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;SF&apos;,&apos;ST&apos;)
+    AND AAT_COLUMN = &apos;ORD_CODE&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos; 
+
+  UNION ALL 
+
+  SELECT USR_DESC AS UpdatedBy, &apos;PART_PO_UPDATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5ORDERS     ON ORD_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS      ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5ORDERS&apos; 
+    AND AVA_UPDATED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;PD&apos;,&apos;PS&apos;)
+    AND AAT_COLUMN = &apos;ORD_CODE&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos;
+
+  UNION ALL 
+
+  SELECT USR_DESC AS UpdatedBy, &apos;SERVICES_PO_UPDATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5ORDERS     ON ORD_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS      ON USR_CODE = AVA_MODIFIEDBY 
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5ORDERS&apos; 
+    AND AVA_UPDATED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;SF&apos;,&apos;ST&apos;)
+    AND AAT_COLUMN = &apos;ORD_CODE&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos;   
+ 
+),
+
+last_login AS (
+  SELECT 
+    SES_USER,
+    MAX(SUS_ACTION_DATE) AS last_login
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+  GROUP BY SES_USER
+)
+
+SELECT
+  ua.UpdatedBy AS &quot;User&quot;,
+
+  COUNT(CASE WHEN ACTION = &apos;PART_PO_CREATED&apos; THEN 1 END) AS &quot;Part POs Created&quot;,
+  COUNT(CASE WHEN ACTION = &apos;PART_PO_UPDATED&apos; THEN 1 END) AS &quot;Part POs Updated&quot;,
+  MAX(CASE WHEN ACTION   = &apos;PART_PO_UPDATED&apos; THEN ACTION_DATE END) AS &quot;Last Part PO Updated&quot;,
+  
+  COUNT(CASE WHEN ACTION = &apos;SERVICES_PO_CREATED&apos; THEN 1 END) AS &quot;Services POs Created&quot;,
+  COUNT(CASE WHEN ACTION = &apos;SERVICES_PO_UPDATED&apos; THEN 1 END) AS &quot;Services POs Updated&quot;,
+  MAX(CASE WHEN ACTION   = &apos;SERVICES_PO_UPDATED&apos; THEN ACTION_DATE END) AS &quot;Last Services PO Updated&quot;,
+    
+  MAX(ll.last_login) AS &quot;Last Login&quot;
+
+FROM user_actions ua
+LEFT JOIN R5USERS ru ON ru.USR_DESC = ua.UpdatedBy
+LEFT JOIN last_login ll ON ll.SES_USER = ru.USR_CODE
+GROUP BY ua.UpdatedBy
+ORDER BY ua.UpdatedBy
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Part POs Created"/><mdProjectedItem name="Part POs Updated"/><mdProjectedItem name="Last Part PO Updated"/><mdProjectedItem name="Services POs Created"/><mdProjectedItem name="Services POs Updated"/><mdProjectedItem name="Last Services PO Updated"/><mdProjectedItem name="Last Login"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL15].[User]</expression></dataItem><dataItem name="Part POs Created" aggregate="total"><expression>[SQL15].[Part POs Created]</expression></dataItem><dataItem name="Part POs Updated" aggregate="total"><expression>[SQL15].[Part POs Updated]</expression></dataItem><dataItem name="Last Part PO Updated"><expression>[SQL15].[Last Part PO Updated]</expression></dataItem><dataItem name="Services POs Created" aggregate="total"><expression>[SQL15].[Services POs Created]</expression></dataItem><dataItem name="Services POs Updated" aggregate="total"><expression>[SQL15].[Services POs Updated]</expression></dataItem><dataItem name="Last Services PO Updated"><expression>[SQL15].[Last Services PO Updated]</expression></dataItem><dataItem name="Last Login"><expression>[SQL15].[Last Login]</expression></dataItem></selection>
+		</query><query name="PartServiceReceipts">
+			<source>
+				
+			<sqlQuery name="SQL17" dataSource="AdvRepData">
+			<sqlText>WITH user_actions AS (
+
+  SELECT USR_DESC AS UpdatedBy, &apos;PART_PO_RECEIPT_CREATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5DOCKRECEIPTS ON DCK_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERS ON DCK_ORDER = ORD_CODE
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5DOCKRECEIPTS&apos; 
+    AND AVA_INSERTED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;PD&apos;,&apos;PS&apos;)
+    AND AAT_COLUMN = &apos;DCK_ORDER&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos;   
+
+  UNION ALL
+
+  SELECT USR_DESC AS UpdatedBy, &apos;SERVICES_PO_RECEIPT_CREATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5DOCKRECEIPTS ON DCK_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERS ON DCK_ORDER = ORD_CODE
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5DOCKRECEIPTS&apos; 
+    AND AVA_INSERTED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;SF&apos;,&apos;ST&apos;)
+    AND AAT_COLUMN = &apos;DCK_ORDER&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos; 
+
+  UNION ALL
+
+  SELECT USR_DESC AS UpdatedBy, &apos;PART_PO_RECEIPT_UPDATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5DOCKRECEIPTS ON DCK_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERS ON DCK_ORDER = ORD_CODE
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5DOCKRECEIPTS&apos; 
+    AND AVA_UPDATED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;PD&apos;,&apos;PS&apos;)
+    AND AAT_COLUMN = &apos;DCK_ORDER&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos;   
+
+  UNION ALL
+
+  SELECT USR_DESC AS UpdatedBy, &apos;SERVICES_PO_RECEIPT_UPDATED&apos; AS ACTION, AVA_CHANGED AS ACTION_DATE
+  FROM R5AUDVALUES 
+  LEFT JOIN R5DOCKRECEIPTS ON DCK_CODE = AVA_PRIMARYID
+  LEFT JOIN R5ORDERS ON DCK_ORDER = ORD_CODE
+  LEFT JOIN R5ORDERLINES ON ORL_ORDER = ORD_CODE
+  LEFT JOIN R5USERS ON USR_CODE = AVA_MODIFIEDBY
+  LEFT JOIN R5AUDATTRIBS ON AAT_CODE = AVA_ATTRIBUTE
+  WHERE AVA_TABLE = &apos;R5DOCKRECEIPTS&apos; 
+    AND AVA_UPDATED = &apos;+&apos;
+    AND ORL_TYPE IN (&apos;SF&apos;,&apos;ST&apos;)
+    AND AAT_COLUMN = &apos;DCK_ORDER&apos;
+    AND USR_DESC IS NOT NULL
+    AND USR_DESC &lt;&gt; &apos;NAME&apos; 
+
+),
+
+last_login AS (
+  SELECT 
+    SES_USER,
+    MAX(SUS_ACTION_DATE) AS last_login
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+  GROUP BY SES_USER
+)
+
+SELECT
+  ua.UpdatedBy AS &quot;User&quot;,
+ 
+  COUNT(CASE WHEN ACTION = &apos;PART_PO_RECEIPT_CREATED&apos; THEN 1 END) AS &quot;Part Receipt Created&quot;,
+  COUNT(CASE WHEN ACTION = &apos;PART_PO_RECEIPT_UPDATED&apos; THEN 1 END) AS &quot;Part Receipt Updated&quot;,
+  MAX(CASE WHEN ACTION   = &apos;PART_PO_RECEIPT_UPDATED&apos; THEN ACTION_DATE END) AS &quot;Last Part Receipt Updated&quot;,
+   
+  COUNT(CASE WHEN ACTION = &apos;SERVICES_PO_RECEIPT_CREATED&apos; THEN 1 END) AS &quot;Services Receipt Created&quot;,
+  COUNT(CASE WHEN ACTION = &apos;SERVICES_PO_RECEIPT_UPDATED&apos; THEN 1 END) AS &quot;Services Receipt Updated&quot;,
+  MAX(CASE WHEN ACTION   = &apos;SERVICES_PO_RECEIPT_UPDATED&apos; THEN ACTION_DATE END) AS &quot;Last Services Receipt Updated&quot;,
+  
+  MAX(ll.last_login) AS &quot;Last Login&quot;
+
+FROM user_actions ua
+LEFT JOIN R5USERS ru ON ru.USR_DESC = ua.UpdatedBy
+LEFT JOIN last_login ll ON ll.SES_USER = ru.USR_CODE
+GROUP BY ua.UpdatedBy
+ORDER BY ua.UpdatedBy
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Part Receipt Created"/><mdProjectedItem name="Part Receipt Updated"/><mdProjectedItem name="Last Part Receipt Updated"/><mdProjectedItem name="Services Receipt Created"/><mdProjectedItem name="Services Receipt Updated"/><mdProjectedItem name="Last Services Receipt Updated"/><mdProjectedItem name="Last Login"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL17].[User]</expression></dataItem><dataItem name="Part Receipt Created" aggregate="total"><expression>[SQL17].[Part Receipt Created]</expression></dataItem><dataItem name="Part Receipt Updated" aggregate="total"><expression>[SQL17].[Part Receipt Updated]</expression></dataItem><dataItem name="Last Part Receipt Updated"><expression>[SQL17].[Last Part Receipt Updated]</expression></dataItem><dataItem name="Services Receipt Created" aggregate="total"><expression>[SQL17].[Services Receipt Created]</expression></dataItem><dataItem name="Services Receipt Updated" aggregate="total"><expression>[SQL17].[Services Receipt Updated]</expression></dataItem><dataItem name="Last Services Receipt Updated"><expression>[SQL17].[Last Services Receipt Updated]</expression></dataItem><dataItem name="Last Login"><expression>[SQL17].[Last Login]</expression></dataItem></selection>
+		</query><query name="StockIssuesAndReceipts">
+			<source>
+				
+			<sqlQuery name="SQL18" dataSource="AdvRepData">
+			<sqlText>WITH user_actions AS (
+
+  SELECT USR_DESC AS UpdatedBy, &apos;STOCK_ISSUES&apos; as ACTION, TRL_CREATED as ACTION_DATE
+  FROM R5TRANSLINES 
+  LEFT JOIN R5TRANSACTIONS ON TRA_CODE = TRL_TRANS
+  LEFT JOIN R5USERS ON USR_CODE = TRA_AUTH 
+  WHERE TRL_TYPE = &apos;I&apos;
+  AND USR_DESC IS NOT NULL
+  AND USR_DESC &lt;&gt; &apos;NAME&apos;
+  
+  UNION ALL
+  SELECT USR_DESC AS UpdatedBy, &apos;STOCK_RETURNS&apos; as ACTION, TRL_CREATED as ACTION_DATE
+  FROM R5TRANSLINES 
+  LEFT JOIN R5TRANSACTIONS ON TRA_CODE = TRL_TRANS
+  LEFT JOIN R5USERS ON USR_CODE = TRA_AUTH 
+  WHERE TRL_TYPE = &apos;RETN&apos;
+  AND USR_DESC IS NOT NULL
+  AND USR_DESC &lt;&gt; &apos;NAME&apos;
+
+),
+
+last_login AS (
+  SELECT 
+    SES_USER,
+    MAX(SUS_ACTION_DATE) AS last_login
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+  GROUP BY SES_USER
+)
+
+SELECT
+  ua.UpdatedBy AS &quot;User&quot;,
+ 
+  COUNT(CASE WHEN ACTION = &apos;STOCK_ISSUES&apos; THEN 1 END) AS &quot;Stock Issues Created&quot;,
+  MAX(CASE WHEN ACTION   = &apos;STOCK_ISSUES&apos; THEN ACTION_DATE END) AS &quot;Date Last Stock Issue&quot;,
+  COUNT(CASE WHEN ACTION = &apos;STOCK_RETURNS&apos; THEN 1 END) AS &quot;Stock Returns Created&quot;,
+  MAX(CASE WHEN ACTION   = &apos;STOCK_RETURNS&apos; THEN ACTION_DATE END) AS &quot;Date Last Stock Return&quot;,
+    
+  MAX(ll.last_login) AS &quot;Last Login&quot;
+
+FROM user_actions ua
+LEFT JOIN R5USERS ru ON ru.USR_DESC = ua.UpdatedBy
+LEFT JOIN last_login ll ON ll.SES_USER = ru.USR_CODE
+GROUP BY ua.UpdatedBy
+ORDER BY ua.UpdatedBy</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User"/><mdProjectedItem name="Stock Issues Created"/><mdProjectedItem name="Date Last Stock Issue"/><mdProjectedItem name="Stock Returns Created"/><mdProjectedItem name="Date Last Stock Return"/><mdProjectedItem name="Last Login"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL18].[User]</expression></dataItem><dataItem name="Stock Issues Created" aggregate="total"><expression>[SQL18].[Stock Issues Created]</expression></dataItem><dataItem name="Date Last Stock Issue"><expression>[SQL18].[Date Last Stock Issue]</expression></dataItem><dataItem name="Stock Returns Created" aggregate="total"><expression>[SQL18].[Stock Returns Created]</expression></dataItem><dataItem name="Date Last Stock Return"><expression>[SQL18].[Date Last Stock Return]</expression></dataItem><dataItem name="Last Login"><expression>[SQL18].[Last Login]</expression></dataItem></selection>
+		</query><query name="Totals">
+			<source>
+				
+			<sqlQuery name="SQL19" dataSource="AdvRepData">
+			<sqlText>WITH login_data AS (
+  SELECT 
+    SES_USER
+  FROM R5USAGE
+  LEFT JOIN R5SESSIONS ON SES_SESSIONID = SUS_SESSIONID
+  WHERE SUS_TYPE = &apos;LOGIN&apos;
+)
+SELECT 
+  COUNT(*) AS &quot;Login Count&quot;
+FROM login_data</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Login Count"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Login Count"><expression>[LoginCountwithLastLoginDate].[Login Count]</expression></dataItem></selection>
+		</query><query name="Top 10 Screens Accessed">
+			<source>
+				
+			<sqlQuery name="SQL20" dataSource="AdvRepData">
+			<sqlText>WITH navigation_data AS (
+  SELECT 
+    SUS_TARGET,
+    FUN_DESC
+    SUS_ACTION_DATE
+  FROM R5USAGE
+left outer join R5FUNCTIONS
+ON SUS_TARGET = FUN_CODE
+  WHERE SUS_ACTION = &apos;NAVIGATION&apos; AND SUS_TYPE &lt;&gt; &apos;LOV&apos;
+)
+SELECT 
+  SUS_TARGET as &quot;Screen&quot;,
+  COUNT(*) AS &quot;Navigation Count&quot;,
+  MAX(SUS_ACTION_DATE) AS &quot;Screen Description&quot;
+FROM navigation_data
+GROUP BY SUS_TARGET
+ORDER BY &quot;Navigation Count&quot; DESC
+FETCH FIRST 10 ROWS ONLY
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Screen"/><mdProjectedItem name="Navigation Count"/><mdProjectedItem name="Screen Description"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Screen Description"><expression>[SQL20].[Screen Description]</expression></dataItem><dataItem name="Navigation Count" rollupAggregate="total" sort="descending" aggregate="total"><expression>[SQL20].[Navigation Count]</expression></dataItem></selection>
+		</query><query name="CoreTransactionCount">
+			<source>
+				
+			<sqlQuery name="SQL21" dataSource="AdvRepData">
+			<sqlText>WITH WorkOrderCount AS (
+  SELECT COUNT(*) AS count_value FROM R5EVENTS
+  WHERE EVT_DATE &gt;= TO_DATE(&apos;2025-01-01&apos;, &apos;YYYY-MM-DD&apos;)
+),
+RequisitionCount AS (
+  SELECT COUNT(*) AS count_value FROM R5REQUISITIONS
+  WHERE REQ_DATE &gt;= TO_DATE(&apos;2025-01-01&apos;, &apos;YYYY-MM-DD&apos;)
+),
+PurchaseOrderCount AS (
+  SELECT COUNT(*) AS count_value FROM R5ORDERS
+  WHERE ORD_DATE &gt;= TO_DATE(&apos;2025-01-01&apos;, &apos;YYYY-MM-DD&apos;)
+),
+InvoiceCount AS (
+  SELECT COUNT(*) AS count_value FROM R5INVOICES
+  WHERE INV_DATE &gt;= TO_DATE(&apos;2025-01-01&apos;, &apos;YYYY-MM-DD&apos;)
+)
+
+-- Final Pivoted Output
+SELECT &apos;Work Orders&apos; AS &quot;Type&quot;, count_value AS &quot;Count&quot; FROM WorkOrderCount
+UNION ALL
+SELECT &apos;Requisitions&apos;, count_value FROM RequisitionCount
+UNION ALL
+SELECT &apos;Purchase Orders&apos;, count_value FROM PurchaseOrderCount
+UNION ALL
+SELECT &apos;Invoices&apos;, count_value FROM InvoiceCount
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Type"/><mdProjectedItem name="Count"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Type"><expression>[SQL21].[Type]</expression></dataItem><dataItem name="Count" aggregate="total" rollupAggregate="total"><expression>[SQL21].[Count]</expression></dataItem></selection>
+		</query><query name="Created Transactions per user">
+			<source>
+				
+			<sqlQuery name="SQL22" dataSource="AdvRepData">
+			<sqlText>SELECT 
+    u.USR_DESC,
+    COALESCE(wo.total_work_orders, 0) AS &quot;Work Orders Created&quot;,
+    COALESCE(req.total_requisitions, 0) AS &quot;Requisitions Created&quot;,
+    COALESCE(po.total_purchase_orders, 0) AS &quot;Purchase Orders Created&quot;,
+    COALESCE(inv.total_invoices, 0) AS &quot;Invoices Created&quot;
+FROM R5USERS u
+LEFT JOIN (
+    SELECT EVT_CREATEDBY AS user_code, COUNT(*) AS total_work_orders
+    FROM R5EVENTS
+    GROUP BY EVT_CREATEDBY
+) wo ON wo.user_code = u.USR_CODE
+LEFT JOIN (
+    SELECT REQ_ENTEREDBY AS user_code, COUNT(*) AS total_requisitions
+    FROM R5REQUISITIONS
+    GROUP BY REQ_ENTEREDBY
+) req ON req.user_code = u.USR_CODE
+LEFT JOIN (
+    SELECT ORD_ORIGIN AS user_code, COUNT(*) AS total_purchase_orders
+    FROM R5ORDERS
+    GROUP BY ORD_ORIGIN
+) po ON po.user_code = u.USR_CODE
+LEFT JOIN (
+    SELECT INV_AUTH AS user_code, COUNT(*) AS total_invoices
+    FROM R5INVOICES
+    GROUP BY INV_AUTH
+) inv ON inv.user_code = u.USR_CODE
+ORDER BY u.USR_DESC
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="USR_DESC"/><mdProjectedItem name="Work Orders Created"/><mdProjectedItem name="Requisitions Created"/><mdProjectedItem name="Purchase Orders Created"/><mdProjectedItem name="Invoices Created"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User"><expression>[SQL22].[USR_DESC]</expression></dataItem><dataItem name="Work Orders Created"><expression>[SQL22].[Work Orders Created]</expression></dataItem><dataItem name="Requisitions Created"><expression>[SQL22].[Requisitions Created]</expression></dataItem><dataItem name="Purchase Orders Created"><expression>[SQL22].[Purchase Orders Created]</expression></dataItem><dataItem name="Invoices Created"><expression>[SQL22].[Invoices Created]</expression></dataItem></selection>
+		</query></queries><classStyles><classStyle name="GuidedLayoutLeftPadding"><CSS value="padding-left:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"/></classStyle><classStyle name="GuidedLayoutTopPadding"><CSS value="padding-top:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"/></classStyle><classStyle name="GuidedLayoutRightPadding"><CSS value="padding-right:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"/></classStyle><classStyle name="GuidedLayoutBottomPadding"><CSS value="padding-bottom:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"/></classStyle><classStyle name="GuidedLayoutMargin"><CSS value="margin-bottom:10px"/></classStyle></classStyles><reportDataStores><reportDataStore name="dataStore"><dsSource><dsV5ListQuery refQuery="LoginCountwithLastLoginDate"><dsV5DataItems><dsV5DataItem refDataItem="User Name"/><dsV5DataItem dsColumnType="value" refDataItem="Login Count"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore1"><dsSource><dsV5ListQuery refQuery="LoginCountwithLastLoginDate"><dsV5DataItems><dsV5DataItem refDataItem="User Name"/><dsV5DataItem dsColumnType="value" refDataItem="Login Count"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore2"><dsSource><dsV5ListQuery refQuery="CorrectiveWO"><dsV5DataItems><dsV5DataItem refDataItem="User"/><dsV5DataItem dsColumnType="value" refDataItem="Corrective Work Orders Updated"/><dsV5DataItem dsColumnType="value" refDataItem="Corrective Work Orders Created"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore3"><dsSource><dsV5ListQuery refQuery="PPMWork"><dsV5DataItems><dsV5DataItem refDataItem="User"/><dsV5DataItem dsColumnType="value" refDataItem="Exam Work Orders Created"/><dsV5DataItem dsColumnType="value" refDataItem="Exam Work Orders Updated"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore4"><dsSource><dsV5ListQuery refQuery="PartServicePOs"><dsV5DataItems><dsV5DataItem refDataItem="User"/><dsV5DataItem dsColumnType="value" refDataItem="Part POs Created"/><dsV5DataItem dsColumnType="value" refDataItem="Part POs Updated"/><dsV5DataItem dsColumnType="value" refDataItem="Services POs Created"/><dsV5DataItem dsColumnType="value" refDataItem="Services POs Updated"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore5"><dsSource><dsV5ListQuery refQuery="PartServiceReceipts"><dsV5DataItems><dsV5DataItem refDataItem="User"/><dsV5DataItem dsColumnType="value" refDataItem="Part Receipt Created"/><dsV5DataItem dsColumnType="value" refDataItem="Part Receipt Updated"/><dsV5DataItem dsColumnType="value" refDataItem="Services Receipt Created"/><dsV5DataItem dsColumnType="value" refDataItem="Services Receipt Updated"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore6"><dsSource><dsV5ListQuery refQuery="StockIssuesAndReceipts"><dsV5DataItems><dsV5DataItem refDataItem="User"/><dsV5DataItem dsColumnType="value" refDataItem="Stock Issues Created"/><dsV5DataItem dsColumnType="value" refDataItem="Stock Returns Created"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore7"><dsSource><dsV5ListQuery refQuery="Top 10 Screens Accessed"><dsV5DataItems><dsV5DataItem refDataItem="Screen Description"/><dsV5DataItem dsColumnType="value" refDataItem="Navigation Count"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore8"><dsSource><dsV5ListQuery refQuery="LoginCountwithLastLoginDate"><dsV5DataItems><dsV5DataItem refDataItem="User Name"/><dsV5DataItem dsColumnType="value" refDataItem="Login Count"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore><reportDataStore name="dataStore9"><dsSource><dsV5ListQuery refQuery="CoreTransactionCount"><dsV5DataItems><dsV5DataItem refDataItem="Type"/><dsV5DataItem dsColumnType="value" refDataItem="Count"/></dsV5DataItems></dsV5ListQuery></dsSource></reportDataStore></reportDataStores></report>
